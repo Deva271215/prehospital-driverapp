@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Driver App</string>
+    <string name="text_signup">Daftar untuk mulai menyelamatkan</string>
+    <string name="hint_groupName">Nama kelompok</string>
+    <string name="prompt_email">Email</string>
+    <string name="hint_noHp">Nomor handphone</string>
+    <string name="action_sign_in_short">Masuk</string>
+    <string name="action_sign_in">Masuk</string>
+    <string name="action_notyet_accout">Belum punya akun? Daftar</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_up">Daftar</string>
+    <string name="action_already_accout">Sudah punya akun? Masuk</string>
+    <string name="text_login">Masuk untuk mulai melakukan pertolongan</string>
+    <string name="text_groupName">Nama Kelompok</string>
+    <string name="value_groupName">BPBD Denpasar 1</string>
+    <string name="value_editgroupName">Nama Kelompok</string>
+    <string name="text_noHp">No. HP</string>
+    <string name="value_noHp">08553300000</string>
+    <string name="text_email">Email</string>
+    <string name="value_email">bpbddenpasar1@gmail.com</string>
+    <string name="button_send">EDIT</string>
+    <string name="value_editnoHp">Nomor Hp</string>
+    <string name="value_editEmail">Email</string>
+    <string name="button_simpan">Simpan</string>
+    <string name="text_pName">G-One</string>
+    <string name="text_uName">Driver</string>
+    <string name="text_Arah">Petunjuk Arah Tujuan Faskes</string>
+    <string name="text_openMap">Buka</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
