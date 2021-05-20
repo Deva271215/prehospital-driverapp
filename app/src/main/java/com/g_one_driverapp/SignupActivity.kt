@@ -63,14 +63,14 @@ class SignupActivity : AppCompatActivity() {
                     call: Call<SignUpResponse>,
                     response: Response<SignUpResponse>
                 ) {
-                    Log.d("Sign up response", response.toString())
-
                     if (response.isSuccessful) {
+                        // If user successfully signup, then redirect to login screen
                         val intent = Intent(this@SignupActivity, LoginActivity::class.java)
                         startActivity(intent)
 
                         Toast.makeText(applicationContext, response.body()?.message, Toast.LENGTH_LONG).show()
                     } else {
+                        // Otherwise, notify the error
                         Toast.makeText(applicationContext, "Akun dengan email ${email} sudah terdaftar.", Toast.LENGTH_LONG).show()
                     }
                 }

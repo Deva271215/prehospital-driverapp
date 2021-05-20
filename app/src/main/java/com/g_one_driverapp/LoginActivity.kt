@@ -54,14 +54,19 @@ class LoginActivity : AppCompatActivity() {
                     call: Call<LoginResponse>,
                     response: Response<LoginResponse>
                 ) {
-                    Log.d("Sign up response", response.body().toString())
-
                     if (response.isSuccessful) {
+                        // If user successfully logged in
+                        // Save user data and access token to SharedPreferences
+
+                        // Redirect to main activity
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intent)
 
+                        // Notify success message
                         Toast.makeText(applicationContext, response.body()?.message, Toast.LENGTH_LONG).show()
                     } else {
+                        // Otherwise
+                        // Notify failed message
                         Toast.makeText(applicationContext, "Email atau password salah.", Toast.LENGTH_LONG).show()
                     }
                 }
