@@ -7,7 +7,6 @@ import android.util.Log
 import android.widget.Toast
 import com.g_one_driverapp.api.ConfigAPI
 import com.g_one_driverapp.api.reponse.SignUpResponse
-import com.g_one_driverapp.api.request.SignUpRequest
 import com.g_one_driverapp.databinding.ActivitySignupBinding
 import com.g_one_driverapp.model.UserEntity
 import kotlinx.android.synthetic.main.activity_signup.*

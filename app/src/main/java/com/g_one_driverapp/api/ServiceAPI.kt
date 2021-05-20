@@ -1,7 +1,7 @@
 package com.g_one_driverapp.api
 
+import com.g_one_driverapp.api.reponse.LoginResponse
 import com.g_one_driverapp.api.reponse.SignUpResponse
-import com.g_one_driverapp.api.request.SignUpRequest
 import com.g_one_driverapp.model.UserEntity
 import retrofit2.Call
 import retrofit2.http.Body
@@ -14,4 +14,10 @@ interface ServiceAPI {
     fun createUser(
         @Body user: UserEntity
     ): Call<SignUpResponse>
+
+    @POST("auth/sign-in")
+    @Headers("Content-Type: application/json", "Accept: application/json")
+    fun signInUser(
+        @Body user: UserEntity
+    ): Call<LoginResponse>
 }
