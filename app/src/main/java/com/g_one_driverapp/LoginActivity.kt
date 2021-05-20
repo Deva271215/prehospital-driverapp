@@ -15,11 +15,19 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         onSignInButtonClicked()
+        onSignUpTextClicked()
     }
 
     private fun onSignInButtonClicked() {
         login.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun onSignUpTextClicked() {
+        btnToSignIn.setOnClickListener {
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
     }
