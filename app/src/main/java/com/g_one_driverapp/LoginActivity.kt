@@ -6,24 +6,29 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.g_one_driverapp.api.ConfigAPI
+import com.g_one_driverapp.api.reponse.LoginData
 import com.g_one_driverapp.api.reponse.LoginResponse
+import com.g_one_driverapp.api.reponse.UserResponse
 import com.g_one_driverapp.databinding.ActivityLoginBinding
 import com.g_one_driverapp.model.UserEntity
+import com.g_one_driverapp.preferences.UserPreference
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.btnToSignIn
 import kotlinx.android.synthetic.main.activity_login.et_password
-import kotlinx.android.synthetic.main.activity_signup.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var preference: UserPreference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        preference = UserPreference(applicationContext)
 
         onLoginButtonClicked()
         onSignUpTextClicked()
@@ -57,6 +62,10 @@ class LoginActivity : AppCompatActivity() {
                     if (response.isSuccessful) {
                         // If user successfully logged in
                         // Save user data and access token to SharedPreferences
+                        val loginData = LoginData(user = response.body()?.data?.user,
+                            response.body()?.data?.access_token
+                        )
+                        preference.setLoginData(loginData)
 
                         // Redirect to main activity
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
