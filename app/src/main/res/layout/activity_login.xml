@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/et_username"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="24dp"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/pertama_text" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/et_password"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="24dp"
@@ -55,7 +55,7 @@
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/et_username"
         android:background="@drawable/button_nofill"/>
 
     <Button
@@ -71,7 +71,7 @@
         android:fontFamily="@font/opensansbold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
     <TextView
         android:id="@+id/btnToSignIn"
