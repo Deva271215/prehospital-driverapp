@@ -4,11 +4,9 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ConfigAPI {
-    companion object {
-//        private const val PROD_URL = "https://canary-dot-g-one-db.an.r.appspot.com/"
-        private const val DEV_URL = "http://localhost:8080/"
-    }
+object ConfigAPI {
+    // private const val PROD_URL = "https://canary-dot-g-one-db.an.r.appspot.com/"
+    private const val DEV_URL = "http://192.168.18.10:8080/"
 
     private val okHttpClient = OkHttpClient.Builder()
             .addInterceptor {
