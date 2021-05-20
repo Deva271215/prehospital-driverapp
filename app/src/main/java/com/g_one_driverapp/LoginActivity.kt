@@ -14,11 +14,11 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        onSignInButtonClicked()
+        onLoginButtonClicked()
         onSignUpTextClicked()
     }
 
-    private fun onSignInButtonClicked() {
+    private fun onLoginButtonClicked() {
         login.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

@@ -2,7 +2,7 @@ package com.g_one_driverapp.api.reponse
 
 import com.google.gson.annotations.SerializedName
 
-data class SignUpResponse (
+data class LoginResponse (
     @field:SerializedName("error")
     val error: Boolean?,
 
@@ -13,9 +13,9 @@ data class SignUpResponse (
     val message: String?,
 
     @field:SerializedName("data")
-    val data: SignUpData?
+    val data: LoginData?
 )
 
-data class SignUpData (
+data class LoginData (
     val user: UserResponse?
 )
