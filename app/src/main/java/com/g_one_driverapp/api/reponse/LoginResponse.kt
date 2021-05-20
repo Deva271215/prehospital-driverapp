@@ -17,5 +17,6 @@ data class LoginResponse (
 )
 
 data class LoginData (
-    val user: UserResponse?
+    val user: UserResponse?,
+    val access_token: String,
 )
