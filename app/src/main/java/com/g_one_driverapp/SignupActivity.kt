@@ -57,7 +57,15 @@ class SignupActivity : AppCompatActivity() {
             }
 
             // Call API
-            val signUpUser = UserEntity(group_name, email, telp, password)
+            val signUpUser = UserEntity(
+                account_type = "DRIVER",
+                group_name = group_name,
+                email = email,
+                telp = telp,
+                password = password,
+                hospital = null,
+                fcm_token = null,
+            )
             ConfigAPI.instance.createUser(signUpUser).enqueue(object: Callback<SignUpResponse> {
                 override fun onResponse(
                     call: Call<SignUpResponse>,
