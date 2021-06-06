@@ -9,16 +9,13 @@
         android:layout_height="match_parent"
         tools:context=".SignupActivity">
 
-        <TextView
-            android:id="@+id/header"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="@string/text_signup"
-            android:fontFamily="@font/opensansbold"
-            android:textColor="@color/red"
-            android:textSize="18sp"
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginVertical="50dp"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -28,10 +25,9 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="36dp"
             android:layout_marginEnd="24dp"
             android:autofillHints="@string/hint_groupName"
-            android:fontFamily="@font/opensansbold"
+            android:fontFamily="@font/robotobold"
             android:background="@drawable/button_nofill"
             android:hint="@string/hint_groupName"
             android:inputType="textEmailAddress"
@@ -40,7 +36,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/header" />
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
 
         <EditText
             android:id="@+id/et_email"
@@ -52,7 +48,7 @@
             android:autofillHints="@string/prompt_email"
             android:background="@drawable/button_nofill"
             android:hint="@string/prompt_email"
-            android:fontFamily="@font/opensansbold"
+            android:fontFamily="@font/robotobold"
             android:inputType="textEmailAddress"
             android:paddingStart="20dp"
             android:selectAllOnFocus="true"
@@ -69,7 +65,7 @@
             android:layout_marginEnd="24dp"
             android:background="@drawable/button_nofill"
             android:hint="@string/hint_noHp"
-            android:fontFamily="@font/opensansbold"
+            android:fontFamily="@font/robotobold"
             android:imeActionLabel="@string/action_sign_in_short"
             android:imeOptions="actionDone"
             android:paddingStart="20dp"
@@ -88,7 +84,7 @@
             android:autofillHints="@string/prompt_password"
             android:background="@drawable/button_nofill"
             android:hint="@string/prompt_password"
-            android:fontFamily="@font/opensansbold"
+            android:fontFamily="@font/robotobold"
             android:imeActionLabel="@string/action_sign_in_short"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
@@ -108,7 +104,8 @@
             android:layout_marginEnd="24dp"
             android:background="@drawable/button_noedge"
             android:text="@string/action_sign_up"
-            android:fontFamily="@font/opensansbold"
+            android:textColor="@color/white"
+            android:fontFamily="@font/robotobold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_password" />
@@ -120,7 +117,7 @@
             android:layout_marginTop="15dp"
             android:gravity="center"
             android:text="@string/action_already_accout"
-            android:fontFamily="@font/opensansbold"
+            android:fontFamily="@font/robotobold"
             android:textColor="@color/red"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
