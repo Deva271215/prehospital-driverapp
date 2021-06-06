@@ -4,53 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/title_pName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:text="@string/text_pName"
-        android:fontFamily="@font/opensansreguler"
-        android:textColor="@color/red"
-        android:textSize="34sp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/title_uName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:paddingHorizontal="69dp"
+        android:fontFamily="@font/robotobold"
         android:text="@string/text_uName"
-        android:fontFamily="@font/opensansbold"
         android:textColor="@color/red"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_pName" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="260dp"
         android:layout_height="180dp"
         android:background="@drawable/button_noedge"
+        android:fontFamily="@font/robotobold"
         android:gravity="center_horizontal"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="20dp"
         android:text="@string/text_Arah"
-        android:fontFamily="@font/opensansbold"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:paddingTop="20dp"
-        android:paddingHorizontal="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_uName"
-        app:layout_constraintVertical_bias="0.47">
-    </TextView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
 
     <TextView
         android:id="@+id/openMaps"
@@ -60,7 +61,7 @@
         android:gravity="center"
         android:background="@drawable/button_noedge_white"
         android:text="@string/text_openMap"
-        android:fontFamily="@font/opensansbold"
+        android:fontFamily="@font/robotobold"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.49"
