@@ -5,8 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ConfigAPI {
-    // private const val PROD_URL = "https://canary-dot-g-one-db.an.r.appspot.com/"
-    private const val DEV_URL = "http://192.168.18.10:8080/"
+    private const val URL = "https://g-one-db.an.r.appspot.com/"
 
     private val okHttpClient = OkHttpClient.Builder()
             .addInterceptor {
@@ -19,7 +18,7 @@ object ConfigAPI {
 
     val instance: ServiceAPI by lazy {
         val retrofit = Retrofit.Builder()
-                .baseUrl(DEV_URL)
+                .baseUrl(URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build()
